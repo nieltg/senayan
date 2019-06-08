@@ -1,0 +1,33 @@
+{
+  "name": "@senayan/api-spec",
+  "version": "0.0.0",
+  "description": "API specification inter-server communication in Senayan infrastructure",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieltg/senayan.git",
+    "directory": "packages/api-spec"
+  },
+  "keywords": [
+    "infrastructure",
+    "auto-update",
+    "distribution",
+    "API",
+    "specification"
+  ],
+  "author": "Daniel Pintara <nieltansah@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.0.7",
+    "ava": "^2.0.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.1",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.1"
+  }
+}
