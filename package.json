@@ -5,5 +5,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pnpm r run precommit"
+    }
+  },
+  "prettier": {
+    "semi": false
+  }
 }

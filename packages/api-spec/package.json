@@ -4,7 +4,8 @@
   "description": "API specification inter-server communication in Senayan infrastructure",
   "main": "dist/index.js",
   "scripts": {
-    "test": "tsc && ava"
+    "test": "tsc && ava",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,11 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "^3.5.1"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "tslint -p . --fix",
+      "git add"
+    ]
   }
 }
