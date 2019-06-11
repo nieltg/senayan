@@ -10,6 +10,14 @@ export namespace IEntryDescriptor {
       throw new Error("No schema information")
     }
 
-    throw new Error("Unknown schema")
+    switch (jsonObject.$schema) {
+      case "https://nieltg.github.com/senayan/schemas/entry-v1.json":
+        break
+
+      default:
+        throw new Error("Unknown schema")
+    }
+
+    throw new Error("Invalid payload")
   }
 }

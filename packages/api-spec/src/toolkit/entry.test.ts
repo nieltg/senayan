@@ -15,3 +15,13 @@ test("IEntryDescriptor.convert throws error for object with unknown schema", t =
     "Unknown schema"
   )
 })
+
+test("IEntryDescriptor.convert throws error for wrong object with schema", t => {
+  t.throws(
+    () =>
+      IEntryDescriptor.convert({
+        $schema: "https://nieltg.github.com/senayan/schemas/entry-v1.json"
+      }),
+    "Invalid payload"
+  )
+})
