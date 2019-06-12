@@ -44,3 +44,14 @@ test("IEntryDescriptor.convert rejects entry-1 with non-array chunks", t => {
     "Invalid payload"
   )
 })
+
+test("IEntryDescriptor.convert rejects entry-1 with empty chunks", t => {
+  t.throws(
+    () =>
+      IEntryDescriptor.convert({
+        $schema: "https://nieltg.github.com/senayan/schemas/entry-v1.json",
+        chunks: []
+      }),
+    "Invalid payload"
+  )
+})

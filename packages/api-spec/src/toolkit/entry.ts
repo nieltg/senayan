@@ -14,7 +14,7 @@ export namespace IEntryDescriptor {
       case "https://nieltg.github.com/senayan/schemas/entry-v1.json":
         const value: IEntryDescriptor = jsonValue
 
-        if (Array.isArray(value.chunks)) {
+        if (Array.isArray(value.chunks) && value.chunks.length > 0) {
           return value
         }
         break
