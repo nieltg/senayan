@@ -5,13 +5,18 @@ export interface IEntryDescriptor {
 
 // tslint:disable-next-line: no-namespace
 export namespace IEntryDescriptor {
-  export function convert(jsonObject: any) {
-    if (!jsonObject.$schema) {
+  export function convert(jsonValue: any) {
+    if (!jsonValue.$schema) {
       throw new Error("No schema information")
     }
 
-    switch (jsonObject.$schema) {
+    switch (jsonValue.$schema) {
       case "https://nieltg.github.com/senayan/schemas/entry-v1.json":
+        const value: IEntryDescriptor = jsonValue
+
+        if (value.chunks) {
+          return value
+        }
         break
 
       default:
