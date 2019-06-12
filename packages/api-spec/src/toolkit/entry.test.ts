@@ -33,3 +33,14 @@ test("IEntryDescriptor.convert accepts minimal correct object", t => {
   }
   t.deepEqual(IEntryDescriptor.convert(value), value)
 })
+
+test("IEntryDescriptor.convert rejects entry-1 with non-array chunks", t => {
+  t.throws(
+    () =>
+      IEntryDescriptor.convert({
+        $schema: "https://nieltg.github.com/senayan/schemas/entry-v1.json",
+        chunks: true
+      }),
+    "Invalid payload"
+  )
+})
