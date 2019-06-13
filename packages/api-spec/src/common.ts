@@ -1,6 +1,6 @@
-export type Converter<T> = (value: any) => T
+export type Verifier = (value: any) => boolean
 
 // tslint:disable-next-line: interface-name
-export interface ConverterMap<T> {
-  [key: string]: Converter<T>
+export interface VerifierMap {
+  [key: string]: Verifier
 }

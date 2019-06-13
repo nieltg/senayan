@@ -1,4 +1,4 @@
-import { ConverterMap } from "../common"
+import { VerifierMap } from "../common"
 
 // tslint:disable-next-line: interface-name
 export interface Entry0 {
@@ -6,29 +6,29 @@ export interface Entry0 {
   asyncs?: string[]
 }
 
-const converters: ConverterMap<Entry0> = {
+const verifiers: VerifierMap = {
   "https://nieltg.github.com/senayan/schemas/entry-0.json": (value: any) => {
     const chunks = value.chunks
     if (!Array.isArray(chunks) || chunks.length === 0) {
-      throw new Error("Invalid payload")
+      return false
     }
 
-    return value
+    return true
   }
 }
 
 // tslint:disable-next-line: no-namespace
 export namespace Entry0 {
-  export function convert(jsonValue: any) {
+  export function verify(jsonValue: any) {
     if (!jsonValue.$schema) {
-      throw new Error("No schema information")
+      return false
     }
 
-    const converter = converters[jsonValue.$schema]
-    if (!converter) {
-      throw new Error("Unknown schema")
+    const verifier = verifiers[jsonValue.$schema]
+    if (!verifier) {
+      return false
     }
 
-    return converter(jsonValue)
+    return verifier(jsonValue)
   }
 }
