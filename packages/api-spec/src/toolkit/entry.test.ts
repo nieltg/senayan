@@ -2,6 +2,10 @@ import test from "ava"
 
 import { Entry0 } from "./entry"
 
+test("Entry0.SCHEMA_URL is exported as string", t => {
+  t.assert(typeof Entry0.SCHEMA_URL === "string")
+})
+
 test("Entry0.verify rejects object with no schema", t => {
   t.false(Entry0.verify({}))
 })

@@ -8,11 +8,11 @@ export interface Entry0 {
 
 // tslint:disable-next-line: no-namespace
 export namespace Entry0 {
+  export const SCHEMA_URL =
+    "https://nieltg.github.com/senayan/schemas/entry-0.json"
+
   export function verify(jsonValue: any) {
-    if (
-      jsonValue.$schema !==
-      "https://nieltg.github.com/senayan/schemas/entry-0.json"
-    ) {
+    if (jsonValue.$schema !== SCHEMA_URL) {
       return false
     }
 
