@@ -1,11 +1,12 @@
 import { ConverterMap } from "../common"
 
-export interface IEntryDescriptor {
+// tslint:disable-next-line: interface-name
+export interface Entry0 {
   chunks: string[]
   asyncs?: string[]
 }
 
-const converters: ConverterMap<IEntryDescriptor> = {
+const converters: ConverterMap<Entry0> = {
   "https://nieltg.github.com/senayan/schemas/entry-0.json": (value: any) => {
     const chunks = value.chunks
     if (!Array.isArray(chunks) || chunks.length === 0) {
@@ -17,7 +18,7 @@ const converters: ConverterMap<IEntryDescriptor> = {
 }
 
 // tslint:disable-next-line: no-namespace
-export namespace IEntryDescriptor {
+export namespace Entry0 {
   export function convert(jsonValue: any) {
     if (!jsonValue.$schema) {
       throw new Error("No schema information")

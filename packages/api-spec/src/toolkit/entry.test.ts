@@ -1,43 +1,43 @@
 import test from "ava"
 
-import { IEntryDescriptor } from "./entry"
+import { Entry0 } from "./entry"
 
-test("IEntryDescriptor.convert rejects object with no schema", t => {
-  t.throws(() => IEntryDescriptor.convert({}), "No schema information")
+test("Entry0.convert rejects object with no schema", t => {
+  t.throws(() => Entry0.convert({}), "No schema information")
 })
 
-test("IEntryDescriptor.convert rejects object with unknown schema", t => {
+test("Entry0.convert rejects object with unknown schema", t => {
   t.throws(
     () =>
-      IEntryDescriptor.convert({
+      Entry0.convert({
         $schema: "unknown"
       }),
     "Unknown schema"
   )
 })
 
-test("IEntryDescriptor.convert rejects wrong entry-0 object", t => {
+test("Entry0.convert rejects wrong entry-0 object", t => {
   t.throws(
     () =>
-      IEntryDescriptor.convert({
+      Entry0.convert({
         $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json"
       }),
     "Invalid payload"
   )
 })
 
-test("IEntryDescriptor.convert accepts minimal correct entry-0", t => {
+test("Entry0.convert accepts minimal correct entry-0", t => {
   const value = {
     $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json",
     chunks: ["chunk.js"]
   }
-  t.deepEqual(IEntryDescriptor.convert(value), value)
+  t.deepEqual(Entry0.convert(value), value)
 })
 
-test("IEntryDescriptor.convert rejects entry-0 with non-array chunks", t => {
+test("Entry0.convert rejects entry-0 with non-array chunks", t => {
   t.throws(
     () =>
-      IEntryDescriptor.convert({
+      Entry0.convert({
         $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json",
         chunks: true
       }),
@@ -45,10 +45,10 @@ test("IEntryDescriptor.convert rejects entry-0 with non-array chunks", t => {
   )
 })
 
-test("IEntryDescriptor.convert rejects entry-0 with empty chunks", t => {
+test("Entry0.convert rejects entry-0 with empty chunks", t => {
   t.throws(
     () =>
-      IEntryDescriptor.convert({
+      Entry0.convert({
         $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json",
         chunks: []
       }),
