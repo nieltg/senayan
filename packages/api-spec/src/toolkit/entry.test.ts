@@ -2,11 +2,11 @@ import test from "ava"
 
 import { IEntryDescriptor } from "./entry"
 
-test("IEntryDescriptor.convert throws error for object with no schema", t => {
+test("IEntryDescriptor.convert rejects object with no schema", t => {
   t.throws(() => IEntryDescriptor.convert({}), "No schema information")
 })
 
-test("IEntryDescriptor.convert throws error for object with unknown schema", t => {
+test("IEntryDescriptor.convert rejects object with unknown schema", t => {
   t.throws(
     () =>
       IEntryDescriptor.convert({
@@ -16,7 +16,7 @@ test("IEntryDescriptor.convert throws error for object with unknown schema", t =
   )
 })
 
-test("IEntryDescriptor.convert throws error for wrong object with schema", t => {
+test("IEntryDescriptor.convert rejects wrong entry-1 object", t => {
   t.throws(
     () =>
       IEntryDescriptor.convert({
@@ -26,7 +26,7 @@ test("IEntryDescriptor.convert throws error for wrong object with schema", t => 
   )
 })
 
-test("IEntryDescriptor.convert accepts minimal correct object", t => {
+test("IEntryDescriptor.convert accepts minimal correct entry-1", t => {
   const value = {
     $schema: "https://nieltg.github.com/senayan/schemas/entry-v1.json",
     chunks: ["chunk.js"]
