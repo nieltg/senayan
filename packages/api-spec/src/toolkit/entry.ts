@@ -1,5 +1,3 @@
-import { VerifierMap } from "../common"
-
 // tslint:disable-next-line: interface-name
 export interface Entry0 {
   chunks: string[]
