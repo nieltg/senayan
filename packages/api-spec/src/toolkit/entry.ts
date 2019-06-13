@@ -6,7 +6,7 @@ export interface IEntryDescriptor {
 }
 
 const converters: ConverterMap<IEntryDescriptor> = {
-  "https://nieltg.github.com/senayan/schemas/entry-v1.json": (value: any) => {
+  "https://nieltg.github.com/senayan/schemas/entry-0.json": (value: any) => {
     const chunks = value.chunks
     if (!Array.isArray(chunks) || chunks.length === 0) {
       throw new Error("Invalid payload")
