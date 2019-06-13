@@ -6,7 +6,7 @@ test("Entry0.verify rejects object with no schema", t => {
   t.false(Entry0.verify({}))
 })
 
-test("Entry0.verify rejects object with unknown schema", t => {
+test("Entry0.verify rejects object with wrong schema", t => {
   t.false(
     Entry0.verify({
       $schema: "unknown"
@@ -14,7 +14,7 @@ test("Entry0.verify rejects object with unknown schema", t => {
   )
 })
 
-test("Entry0.verify rejects wrong entry-0 object", t => {
+test("Entry0.verify rejects wrong object", t => {
   t.false(
     Entry0.verify({
       $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json"
@@ -22,7 +22,7 @@ test("Entry0.verify rejects wrong entry-0 object", t => {
   )
 })
 
-test("Entry0.verify accepts minimal correct entry-0", t => {
+test("Entry0.verify accepts minimal correct object", t => {
   t.true(
     Entry0.verify({
       $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json",
@@ -31,7 +31,7 @@ test("Entry0.verify accepts minimal correct entry-0", t => {
   )
 })
 
-test("Entry0.verify rejects entry-0 with non-array chunks", t => {
+test("Entry0.verify rejects object with non-array chunks", t => {
   t.false(
     Entry0.verify({
       $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json",
@@ -40,7 +40,7 @@ test("Entry0.verify rejects entry-0 with non-array chunks", t => {
   )
 })
 
-test("Entry0.verify rejects entry-0 with empty chunks", t => {
+test("Entry0.verify rejects object with empty chunks", t => {
   t.false(
     Entry0.verify({
       $schema: "https://nieltg.github.com/senayan/schemas/entry-0.json",
