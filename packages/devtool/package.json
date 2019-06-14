@@ -33,6 +33,8 @@
   },
   "devDependencies": {
     "@types/node": "^12.0.8",
+    "@types/webpack": "^4.4.32",
+    "@types/webpack-sources": "^0.1.5",
     "ava": "^2.1.0",
     "lint-staged": "github:nieltg/lint-staged#pnpm",
     "prettier": "^1.18.2",
@@ -42,6 +44,8 @@
     "typescript": "^3.5.2"
   },
   "dependencies": {
-    "@senayan/api-spec": "^0.0.0"
+    "@senayan/api-spec": "^0.0.0",
+    "webpack": "^4.34.0",
+    "webpack-sources": "^1.3.0"
   }
 }
