@@ -1,0 +1,47 @@
+{
+  "name": "devtool",
+  "version": "0.0.0",
+  "description": "Development tool for managing Senayan infrastructure",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc && ava",
+    "precommit": "lint-staged",
+    "lint": "tslint -p . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieltg/senayan.git",
+    "directory": "packages/devtool"
+  },
+  "keywords": [
+    "infrastructure",
+    "auto-update",
+    "distribution",
+    "development",
+    "tool"
+  ],
+  "author": "Daniel Pintara <nieltansah@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nieltg/senayan/issues"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "tslint -p . --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "ava": "^2.1.0",
+    "lint-staged": "github:nieltg/lint-staged#pnpm",
+    "prettier": "^1.18.2",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@senayan/api-spec": "^0.0.0"
+  }
+}
