@@ -10,19 +10,19 @@ importers:
       ava: 2.1.0
       lint-staged: github.com/nieltg/lint-staged/22a506569737f4d937d13aa641115db124da088d
       prettier: 1.18.2
-      tslint: 5.17.0_typescript@3.5.1
+      tslint: 5.17.0_typescript@3.5.2
       tslint-config-prettier: 1.18.0
       tslint-plugin-prettier: 2.0.1_prettier@1.18.2+tslint@5.17.0
-      typescript: 3.5.1
+      typescript: 3.5.2
     specifiers:
-      '@types/node': ^12.0.7
-      ava: ^2.0.0
+      '@types/node': ^12.0.8
+      ava: ^2.1.0
       lint-staged: 'github:nieltg/lint-staged#pnpm'
-      prettier: ^1.18.1
+      prettier: ^1.18.2
       tslint: ^5.17.0
       tslint-config-prettier: ^1.18.0
       tslint-plugin-prettier: ^2.0.1
-      typescript: ^3.5.1
+      typescript: ^3.5.2
   packages/devtool:
     dependencies:
       '@senayan/api-spec': 'link:../api-spec'
@@ -4892,30 +4892,6 @@ packages:
       tslint: ^5.0.0
     resolution:
       integrity: sha512-4FX9JIx/1rKHIPJNfMb+ooX1gPk5Vg3vNi7+dyFYpLO+O57F4g+b/fo1+W/G0SUOkBLHB/YKScxjX/P+7ZT/Tw==
-  /tslint/5.17.0_typescript@3.5.1:
-    dependencies:
-      '@babel/code-frame': 7.0.0
-      builtin-modules: 1.1.1
-      chalk: 2.4.2
-      commander: 2.20.0
-      diff: 3.5.0
-      glob: 7.1.4
-      js-yaml: 3.13.1
-      minimatch: 3.0.4
-      mkdirp: 0.5.1
-      resolve: 1.11.0
-      semver: 5.7.0
-      tslib: 1.10.0
-      tsutils: 2.29.0_typescript@3.5.1
-      typescript: 3.5.1
-    dev: true
-    engines:
-      node: '>=4.8.0'
-    hasBin: true
-    peerDependencies:
-      typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev'
-    resolution:
-      integrity: sha512-pflx87WfVoYepTet3xLfDOLDm9Jqi61UXIKePOuca0qoAZyrGWonDG9VTbji58Fy+8gciUn8Bt7y69+KEVjc/w==
   /tslint/5.17.0_typescript@3.5.2:
     dependencies:
       '@babel/code-frame': 7.0.0
@@ -4940,15 +4916,6 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev'
     resolution:
       integrity: sha512-pflx87WfVoYepTet3xLfDOLDm9Jqi61UXIKePOuca0qoAZyrGWonDG9VTbji58Fy+8gciUn8Bt7y69+KEVjc/w==
-  /tsutils/2.29.0_typescript@3.5.1:
-    dependencies:
-      tslib: 1.10.0
-      typescript: 3.5.1
-    dev: true
-    peerDependencies:
-      typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
-    resolution:
-      integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
   /tsutils/2.29.0_typescript@3.5.2:
     dependencies:
       tslib: 1.10.0
@@ -4990,13 +4957,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/3.5.1:
-    dev: true
-    engines:
-      node: '>=4.2.0'
-    hasBin: true
-    resolution:
-      integrity: sha512-64HkdiRv1yYZsSe4xC1WVgamNigVYjlssIoaH2HcZF0+ijsk5YK2g0G34w9wJkze8+5ow4STd22AynfO6ZYYLw==
   /typescript/3.5.2:
     dev: true
     engines:
