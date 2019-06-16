@@ -19,7 +19,8 @@ test.before("Webpack compilation is successful", t => {
 
       entry: {
         a: "./tests/fixtures/multi-entry/a.js",
-        b: "./tests/fixtures/multi-entry/b.js"
+        b: "./tests/fixtures/multi-entry/b.js",
+        entryC: "./tests/fixtures/multi-entry/c.js"
       }
     })
 
@@ -47,6 +48,11 @@ function extractAssetNames(stats: Stats.ToJsonOutput) {
 test("Entry descriptors are emitted", t => {
   const files = extractAssetNames(t.context)
   t.true(files.includes("a.entry.json") && files.includes("b.entry.json"))
+})
+
+test("Entry name is used instead of file name", t => {
+  const files = extractAssetNames(t.context)
+  t.true(files.includes("entryC.entry.json") && !files.includes("c.entry.json"))
 })
 
 test("Non-entry descriptors aren't emitted", t => {
