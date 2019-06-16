@@ -1,8 +1,4 @@
-import webpack, {
-  compilation as WebpackCompilation,
-  Compiler,
-  Plugin
-} from "webpack"
+import { compilation as WebpackCompilation, Compiler, Plugin } from "webpack"
 import { RawSource } from "webpack-sources"
 
 import { Entry0 } from "@senayan/api-spec"
