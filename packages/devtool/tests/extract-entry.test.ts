@@ -12,10 +12,14 @@ test.before("Webpack compilation is successful", t => {
     const compiler = webpack({
       // Webpack config.
       mode: "production",
+      optimization: {
+        minimize: false
+      },
       output: {
         path: path.resolve(__dirname, `${__filename}-webpack-out`)
       },
       plugins: [new ExtractEntryPlugin()],
+      target: "webworker",
 
       entry: {
         a: "./tests/fixtures/multi-entry/a.js",
