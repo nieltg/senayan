@@ -11,11 +11,13 @@
     "sourceMap": true,
     "outDir": "dist",
     "removeComments": true,
+    "downlevelIteration": true,
 
     /* Strict Type-Checking Options */
     "strict": true,
 
     /* Module Resolution Options */
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true
   }
 }
