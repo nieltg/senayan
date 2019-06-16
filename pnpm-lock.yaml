@@ -32,6 +32,7 @@ importers:
       '@types/node': 12.0.8
       '@types/webpack': 4.4.32
       '@types/webpack-sources': 0.1.5
+      acorn: 6.1.1
       ava: 2.1.0
       lint-staged: github.com/nieltg/lint-staged/22a506569737f4d937d13aa641115db124da088d
       prettier: 1.18.2
@@ -44,6 +45,7 @@ importers:
       '@types/node': ^12.0.8
       '@types/webpack': ^4.4.32
       '@types/webpack-sources': ^0.1.5
+      acorn: ^6.1.1
       ava: ^2.1.0
       lint-staged: 'github:nieltg/lint-staged#pnpm'
       prettier: ^1.18.2
@@ -592,7 +594,6 @@ packages:
     resolution:
       integrity: sha512-d3OEjQV4ROpoflsnUA8HozoIR504TFxNivYEUi6uwz0IYhBkTDXGuWlNdMtybRt3nqVx/L6XqMt0FxkXuWKZhw==
   /acorn/6.1.1:
-    dev: false
     engines:
       node: '>=0.4.0'
     hasBin: true
