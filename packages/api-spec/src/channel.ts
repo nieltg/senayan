@@ -15,7 +15,11 @@ export namespace Channel0 {
     if (jsonValue.$schema !== SCHEMA_URL) {
       return false
     }
-    if (!jsonValue.baseUri || !jsonValue.entryConfigId) {
+    if (
+      !jsonValue.baseUri ||
+      !jsonValue.entryConfigId ||
+      !jsonValue.mainChunkId
+    ) {
       return false
     }
 

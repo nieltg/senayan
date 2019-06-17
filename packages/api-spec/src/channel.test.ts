@@ -48,3 +48,13 @@ test("Channel0.verify rejects object with no entryConfigId", t => {
     })
   )
 })
+
+test("Channel0.verify rejects object with no mainChunkId", t => {
+  t.false(
+    Channel0.verify({
+      $schema: "https://nieltg.github.com/senayan/schemas/channel-0.json",
+      baseUri: "https://example.com",
+      entryConfigId: "main.entry.json"
+    })
+  )
+})
