@@ -11,6 +11,10 @@ export namespace Channel0 {
   export const SCHEMA_URL =
     "https://nieltg.github.com/senayan/schemas/channel-0.json"
 
+  export function stringify(value: Channel0) {
+    return JSON.stringify({ ...value, $schema: SCHEMA_URL })
+  }
+
   export function verify(jsonValue: any) {
     if (jsonValue.$schema !== SCHEMA_URL) {
       return false
