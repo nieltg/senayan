@@ -1,0 +1,51 @@
+{
+  "name": "@senayan/indicator-react",
+  "version": "0.0.0",
+  "description": "Show indicator based on component-promise status",
+  "main": "dist",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "tsc && ava",
+    "precommit": "lint-staged",
+    "prepublishOnly": "tsc",
+    "lint": "tslint -p . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieltg/senayan.git",
+    "directory": "packages/indicator-react"
+  },
+  "keywords": [
+    "infrastructure",
+    "auto-update",
+    "distribution",
+    "indicator",
+    "promise"
+  ],
+  "author": "Daniel Pintara <nieltansah@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nieltg/senayan/issues"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "tslint -p . --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.20",
+    "ava": "^2.1.0",
+    "lint-staged": "github:nieltg/lint-staged#pnpm",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.6"
+  }
+}

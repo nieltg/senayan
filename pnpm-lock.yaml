@@ -55,6 +55,29 @@ importers:
       typescript: ^3.5.2
       webpack: ^4.34.0
       webpack-sources: ^1.3.0
+  packages/indicator-react:
+    devDependencies:
+      '@types/node': 12.0.8
+      '@types/react': 16.8.20
+      ava: 2.1.0
+      lint-staged: github.com/nieltg/lint-staged/22a506569737f4d937d13aa641115db124da088d
+      prettier: 1.18.2
+      react: 16.8.6
+      tslint: 5.17.0_typescript@3.5.2
+      tslint-config-prettier: 1.18.0
+      tslint-plugin-prettier: 2.0.1_prettier@1.18.2+tslint@5.17.0
+      typescript: 3.5.2
+    specifiers:
+      '@types/node': ^12.0.8
+      '@types/react': ^16.8.20
+      ava: ^2.1.0
+      lint-staged: 'github:nieltg/lint-staged#pnpm'
+      prettier: ^1.18.2
+      react: ^16.8.6
+      tslint: ^5.17.0
+      tslint-config-prettier: ^1.18.0
+      tslint-plugin-prettier: ^2.0.1
+      typescript: ^3.5.2
 lockfileVersion: 5.1
 packages:
   /@ava/babel-plugin-throws-helper/3.0.0:
@@ -417,6 +440,17 @@ packages:
     dev: true
     resolution:
       integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
+  /@types/prop-types/15.7.1:
+    dev: true
+    resolution:
+      integrity: sha512-CFzn9idOEpHrgdw8JsoTkaDDyRWk1jrzIV8djzcgpq0y9tG4B4lFT+Nxh52DVpDXV+n4+NPNv7M1Dj5uMp6XFg==
+  /@types/react/16.8.20:
+    dependencies:
+      '@types/prop-types': 15.7.1
+      csstype: 2.6.5
+    dev: true
+    resolution:
+      integrity: sha512-ZLmI+ubSJpfUIlQuULDDrdyuFQORBuGOvNnMue8HeA0GVrAJbWtZQhcBvnBPNRBI/GrfSfrKPFhthzC2SLEtLQ==
   /@types/source-list-map/0.1.2:
     dev: true
     resolution:
@@ -1593,6 +1627,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-ojD2T1aDEOFJgAmUB5DsmVRbyn4=
+  /csstype/2.6.5:
+    dev: true
+    resolution:
+      integrity: sha512-JsTaiksRsel5n7XwqPAfB0l3TFKdpjW/kgAELf9vrb5adGA7UCPLajKK5s3nFrcFm3Rkyp/Qkgl73ENc1UY3cA==
   /currently-unhandled/0.4.1:
     dependencies:
       array-find-index: 1.0.2
@@ -2216,7 +2254,7 @@ packages:
     dependencies:
       arrify: 1.0.1
       matcher: 1.1.1
-      simple-git: 1.113.0
+      simple-git: 1.115.0
     dev: true
     engines:
       node: '>=6'
@@ -3140,6 +3178,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-iDKP19HOeTiykoN0bwsbwSayRwg=
+  /loose-envify/1.4.0:
+    dependencies:
+      js-tokens: 4.0.0
+    dev: true
+    hasBin: true
+    resolution:
+      integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   /loud-rejection/1.6.0:
     dependencies:
       currently-unhandled: 0.4.1
@@ -3952,6 +3997,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-mEcocL8igTL8vdhoEputEsPAKeM=
+  /prop-types/15.7.2:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      react-is: 16.8.6
+    dev: true
+    resolution:
+      integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
   /prr/1.0.1:
     dev: false
     resolution:
@@ -4047,6 +4100,21 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==
+  /react-is/16.8.6:
+    dev: true
+    resolution:
+      integrity: sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
+  /react/16.8.6:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+      prop-types: 15.7.2
+      scheduler: 0.13.6
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
   /read-pkg-up/3.0.0:
     dependencies:
       find-up: 2.1.0
@@ -4311,6 +4379,13 @@ packages:
       ret: 0.1.15
     resolution:
       integrity: sha1-QKNmnzsHfR6UPURinhV91IAjvy4=
+  /scheduler/0.13.6:
+    dependencies:
+      loose-envify: 1.4.0
+      object-assign: 4.1.1
+    dev: true
+    resolution:
+      integrity: sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
   /schema-utils/1.0.0:
     dependencies:
       ajv: 6.10.0
@@ -4402,12 +4477,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
-  /simple-git/1.113.0:
+  /simple-git/1.115.0:
     dependencies:
       debug: 4.1.1
     dev: true
     resolution:
-      integrity: sha512-i9WVsrK2u0G/cASI9nh7voxOk9mhanWY9eGtWBDSYql6m49Yk5/Fan6uZsDr/xmzv8n+eQ8ahKCoEr8cvU3h+g==
+      integrity: sha512-PXcDVDgXifUE7/M2xUfQQ8uG3r73+kYRyPmsbc/iWwUrPbOASHt8p+HEbu85k546qmXixbcSPDg83kegw1vqcA==
   /slash/2.0.0:
     dev: true
     engines:
