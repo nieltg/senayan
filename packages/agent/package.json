@@ -1,5 +1,5 @@
 {
-  "name": "agent",
+  "name": "@senayan/agent",
   "version": "0.0.0",
   "description": "Agent for updating application using Senayan infrastructure",
   "main": "dist/index.js",

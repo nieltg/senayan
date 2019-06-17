@@ -1,5 +1,5 @@
 {
-  "name": "devtool",
+  "name": "@senayan/devtool",
   "version": "0.0.0",
   "description": "Development tool for managing Senayan infrastructure",
   "main": "dist/index.js",
