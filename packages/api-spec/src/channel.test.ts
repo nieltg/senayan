@@ -28,3 +28,13 @@ test("Channel0.verify rejects object with wrong schema", t => {
     })
   )
 })
+
+test("Channel0.verify rejects object with no baseUri", t => {
+  t.false(
+    Channel0.verify({
+      $schema: "https://nieltg.github.com/senayan/schemas/channel-0.json",
+      entryConfigId: "main.entry.json",
+      mainChunkId: "main.js"
+    })
+  )
+})
