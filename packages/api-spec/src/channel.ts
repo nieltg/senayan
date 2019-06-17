@@ -15,7 +15,7 @@ export namespace Channel0 {
     if (jsonValue.$schema !== SCHEMA_URL) {
       return false
     }
-    if (!jsonValue.baseUri) {
+    if (!jsonValue.baseUri || !jsonValue.entryConfigId) {
       return false
     }
 
