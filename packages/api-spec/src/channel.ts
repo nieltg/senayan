@@ -15,7 +15,7 @@ export namespace Channel0 {
     return JSON.stringify({ ...value, $schema: SCHEMA_URL })
   }
 
-  export function verify(jsonValue: any) {
+  export function verify(jsonValue: any): jsonValue is Channel0 {
     if (jsonValue.$schema !== SCHEMA_URL) {
       return false
     }
