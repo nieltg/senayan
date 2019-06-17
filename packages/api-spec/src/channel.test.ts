@@ -20,3 +20,11 @@ test("Channel0.verify accepts correct object", t => {
     })
   )
 })
+
+test("Channel0.verify rejects object with wrong schema", t => {
+  t.false(
+    Channel0.verify({
+      $schema: "unknown"
+    })
+  )
+})

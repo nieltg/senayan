@@ -12,6 +12,10 @@ export namespace Channel0 {
     "https://nieltg.github.com/senayan/schemas/channel-0.json"
 
   export function verify(jsonValue: any) {
-    return Object.keys(jsonValue).length > 0
+    if (jsonValue.$schema !== SCHEMA_URL) {
+      return false
+    }
+
+    return true
   }
 }
