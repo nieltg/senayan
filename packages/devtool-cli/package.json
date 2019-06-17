@@ -1,0 +1,48 @@
+{
+  "name": "@senayan/devtool-cli",
+  "version": "0.0.0",
+  "description": "Command-line interface for Senayan development tool",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tsc && ava",
+    "precommit": "lint-staged",
+    "lint": "tslint -p . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieltg/senayan.git",
+    "directory": "packages/devtool-cli"
+  },
+  "keywords": [
+    "infrastructure",
+    "auto-update",
+    "distribution",
+    "development",
+    "cli"
+  ],
+  "author": "Daniel Pintara <nieltansah@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nieltg/senayan/issues"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "tslint -p . --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "ava": "^2.1.0",
+    "lint-staged": "github:nieltg/lint-staged#pnpm",
+    "prettier": "^1.18.2",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@senayan/devtool": "^0.0.0",
+    "yargs": "^13.2.4"
+  }
+}
