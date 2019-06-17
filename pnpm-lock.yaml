@@ -4,6 +4,32 @@ importers:
       husky: 2.4.1
     specifiers:
       husky: ^2.3.0
+  packages/agent:
+    dependencies:
+      '@senayan/api-spec': 'link:../api-spec'
+      url-join: 4.0.0
+    devDependencies:
+      '@types/node': 12.0.8
+      '@types/url-join': 4.0.0
+      ava: 2.1.0
+      lint-staged: github.com/nieltg/lint-staged/22a506569737f4d937d13aa641115db124da088d
+      prettier: 1.18.2
+      tslint: 5.17.0_typescript@3.5.2
+      tslint-config-prettier: 1.18.0
+      tslint-plugin-prettier: 2.0.1_prettier@1.18.2+tslint@5.17.0
+      typescript: 3.5.2
+    specifiers:
+      '@senayan/api-spec': ^0.0.0
+      '@types/node': ^12.0.8
+      '@types/url-join': ^4.0.0
+      ava: ^2.1.0
+      lint-staged: 'github:nieltg/lint-staged#pnpm'
+      prettier: ^1.18.2
+      tslint: ^5.17.0
+      tslint-config-prettier: ^1.18.0
+      tslint-plugin-prettier: ^2.0.1
+      typescript: ^3.5.2
+      url-join: ^4.0.0
   packages/api-spec:
     devDependencies:
       '@types/node': 12.0.8
@@ -465,6 +491,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-SudIN9TRJ+v8g5pTG8RRCqfqTMNqgWCKKd3vtynhGzkIIjxaicNAMuY5TRadJ6tzDu3Dotf3ngaMILtmOdmWEQ==
+  /@types/url-join/4.0.0:
+    dev: true
+    resolution:
+      integrity: sha512-awrJu8yML4E/xTwr2EMatC+HBnHGoDxc2+ImA9QyeUELI1S7dOCIZcyjki1rkwoA8P2D2NVgLAJLjnclkdLtAw==
   /@types/webpack-sources/0.1.5:
     dependencies:
       '@types/node': 12.0.8
@@ -5153,6 +5183,10 @@ packages:
   /urix/0.1.0:
     resolution:
       integrity: sha1-2pN/emLiH+wf0Y1Js1wpNQZ6bHI=
+  /url-join/4.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-TTNA6AfTdzvamZH4MFrNzCpmXSo=
   /url-parse-lax/3.0.0:
     dependencies:
       prepend-http: 2.0.0
