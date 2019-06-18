@@ -35,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "@types/cosmiconfig": "^5.0.3",
     "@types/node": "^12.0.8",
     "@types/yargs": "^13.0.0",
     "ava": "^2.1.0",
@@ -47,6 +48,7 @@
   },
   "dependencies": {
     "@senayan/devtool": "^0.0.0",
+    "cosmiconfig": "^5.2.1",
     "yargs": "^13.2.4"
   }
 }
