@@ -4,7 +4,7 @@
   "description": "Command-line interface for Senayan development tool",
   "main": "dist/index.js",
   "bin": {
-    "senayan": "dist/cli"
+    "senayan": "./dist/cli.js"
   },
   "scripts": {
     "test": "tsc && ava",
