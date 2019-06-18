@@ -11,14 +11,23 @@
     "precommit": "echo \"No precommit yet\""
   },
   "dependencies": {
+    "@senayan/agent": "0.0.0",
+    "@senayan/indicator-react": "0.0.0",
     "expo": "^33.0.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.18.2",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
-    "react-native-web": "^0.11.4"
+    "react-native-web": "^0.11.4",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1"
   },
   "devDependencies": {
-    "babel-preset-expo": "^5.1.1"
+    "@types/react-native": "^0.57.63",
+    "babel-preset-expo": "^5.1.1",
+    "typescript": "^3.5.2"
   },
   "private": true
 }
