@@ -14,7 +14,7 @@ export function buildTarget(compiler: Compiler) {
 export async function build(webpackConfig: Configuration) {
   const compiler = webpack({
     ...webpackConfig,
-    plugins: [new ExtractEntryPlugin()],
+    plugins: [...webpackConfig.plugins, new ExtractEntryPlugin()],
     target: buildTarget
   })
 
