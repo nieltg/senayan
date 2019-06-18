@@ -16,6 +16,7 @@
     "strict": true,
 
     /* Module Resolution Options */
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "esModuleInterop": true
   }
 }
