@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import cosmiconfig from "cosmiconfig"
 import { scriptName } from "yargs"
 
 import { build } from "@senayan/devtool"
@@ -10,13 +11,14 @@ scriptName("senayan")
     "build",
     "Build the project for Senayan infrastructure",
     yargs => yargs,
-    argv => {
-      build({}).then(
+    // tslint:disable-next-line: variable-name
+    async _argv => {
+      const result = await cosmiconfig("senayan").search()
+      if (result) {
+        const stats = await build(result.config.webpack)
         // tslint:disable-next-line: no-console
-        stats => console.log(stats.toString()),
-        // tslint:disable-next-line: no-console
-        reason => console.log(reason)
-      )
+        console.log(stats.toString())
+      }
     }
   )
   .help().argv
