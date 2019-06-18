@@ -1,0 +1,29 @@
+{
+  "name": "@senayan/demo-components",
+  "version": "0.0.0",
+  "scripts": {
+    "precommit": "echo \"No precommit yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nieltg/senayan.git",
+    "directory": "demo/components"
+  },
+  "author": "Daniel Pintara <nieltansah@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nieltg/senayan/issues"
+  },
+  "devDependencies": {
+    "@senayan/devtool-cli": "0.0.0",
+    "prettier": "^1.18.2",
+    "ts-loader": "^6.0.3",
+    "tslint": "^5.17.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "@senayan/indicator-react": "^0.0.0"
+  }
+}
