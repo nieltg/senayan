@@ -21,11 +21,13 @@ interface IState {
 export default class Indicator extends React.Component<IProps, IState> {
   constructor(props: Readonly<IProps>) {
     super(props)
+    this.state = { promise: props.promise }
     this.handlePromise(props.promise)
   }
 
   public componentDidUpdate(prevProps: Readonly<IProps>) {
     if (this.props.promise !== prevProps.promise) {
+      this.setState({ promise: this.props.promise })
       this.handlePromise(this.props.promise)
     }
   }
@@ -41,7 +43,6 @@ export default class Indicator extends React.Component<IProps, IState> {
   }
 
   private async handlePromise(promise?: Promise<React.ReactNode>) {
-    this.setState({ promise })
     if (promise) {
       try {
         this.setStateIfValid(promise, { node: await promise })
