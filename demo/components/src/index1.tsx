@@ -24,7 +24,7 @@ class MyComponent extends React.Component<{}, IMyComponentState> {
   }
 
   private onButtonPress() {
-    const element = import("./henlo1").then(v => v.default)
+    const element = import("./hello1").then(v => v.default)
     this.setState({
       nextComponent: (
         <Indicator
