@@ -27,7 +27,11 @@ export default class Indicator extends React.Component<IProps, IState> {
 
   public componentDidUpdate(prevProps: Readonly<IProps>) {
     if (this.props.promise !== prevProps.promise) {
-      this.setState({ promise: this.props.promise })
+      this.setState({
+        message: undefined,
+        node: undefined,
+        promise: this.props.promise
+      })
       this.handlePromise(this.props.promise)
     }
   }
@@ -45,9 +49,15 @@ export default class Indicator extends React.Component<IProps, IState> {
   private async handlePromise(promise?: Promise<React.ReactNode>) {
     if (promise) {
       try {
-        this.setStateIfValid(promise, { node: await promise })
+        this.setStateIfValid(promise, {
+          node: await promise,
+          promise: undefined
+        })
       } catch (e) {
-        this.setStateIfValid(promise, { message: String(e) })
+        this.setStateIfValid(promise, {
+          message: String(e),
+          promise: undefined
+        })
       }
     }
   }
