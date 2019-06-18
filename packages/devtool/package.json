@@ -38,7 +38,7 @@
     "@types/webpack-sources": "^0.1.5",
     "acorn": "^6.1.1",
     "ava": "^2.1.0",
-    "lint-staged": "github:nieltg/lint-staged#pnpm",
+    "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",

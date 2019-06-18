@@ -1,5 +1,0 @@
-packages:
-  # the root package.json
-  - '.'
-  # all packages in packages/
-  - 'packages/*'
