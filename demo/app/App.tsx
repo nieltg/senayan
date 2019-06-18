@@ -12,12 +12,17 @@ const styles = StyleSheet.create({
   }
 })
 
+const nodePromise: Promise<ReactNode> = load(
+  "https://3150060f.ngrok.io/config.json",
+  {
+    react: require("react"),
+    "react-native": require("react-native")
+  }
+)
 const App = () => (
   <View style={styles.container}>
     <Indicator
-      promise={
-        load("https://3150060f.ngrok.io/config.json") as Promise<ReactNode>
-      }
+      promise={nodePromise}
       loading={<Text>Loading...</Text>}
       error={(props: any) => <Text>Error: {props.message}</Text>}
     />
