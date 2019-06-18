@@ -4,7 +4,10 @@ const webpack = require("webpack")
 module.exports = {
   webpack: {
     mode: "production",
-    entry: "./src/index",
+    entry: {
+      a: "./src/index1",
+      b: "./src/index2"
+    },
     module: {
       rules: [
         {
