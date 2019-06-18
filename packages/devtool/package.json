@@ -2,7 +2,8 @@
   "name": "@senayan/devtool",
   "version": "0.0.0",
   "description": "Development tool for managing Senayan infrastructure",
-  "main": "dist/index.js",
+  "main": "./dist/lib",
+  "types": "./dist/lib/index.d.ts",
   "scripts": {
     "test": "tsc && ava",
     "precommit": "lint-staged",
